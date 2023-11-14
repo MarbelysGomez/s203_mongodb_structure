@@ -1,0 +1,3 @@
+
+db.createCollection( 'suppliers', {validator: {$jsonSchema: {bsonType: 'object',title:'suppliers',required: [         'name',          'phone_number',          'fax',          'nif',          'address'],properties: {name: {bsonType: 'string'},phone_number: {bsonType: 'int'},fax: {bsonType: 'int'},nif: {bsonType: 'int'},address: {bsonType: 'object',
+title:'object',required: [         'street',          'number',          'floor',          'door',          'city',          'postal_code',          'country'],properties: {street: {bsonType: 'string'},number: {bsonType: 'int'},floor: {bsonType: 'int'},door: {bsonType: 'string'},city: {bsonType: 'string'},postal_code: {bsonType: 'string'},country: {bsonType: 'string'}}}}         }      }});  

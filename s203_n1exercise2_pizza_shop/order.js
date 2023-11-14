@@ -1,0 +1,5 @@
+
+db.createCollection( 'order', {validator: {$jsonSchema: {bsonType: 'object',title:'order',required: [         'invoice_number',          'date',          'delivery_type',          'total_amount',          'order_line',          'customer',          'store'],properties: {invoice_number: {bsonType: 'string'},date: {bsonType: 'date'},delivery_type: {enum: , description:'{pick_up, delivery}',},total_amount: {bsonType: 'double'},order_line: {bsonType: 'object',
+title:'object',required: [         'quantity',          'product'],properties: {quantity: {bsonType: 'decimal'},product: {bsonType: 'object',
+title:'object',required: [         'name',          'description',          'image',          'unit_price',          'unit',          'category'],properties: {name: {bsonType: 'string'},description: {bsonType: 'string'},image: {bsonType: 'string'},unit_price: {bsonType: 'decimal'},unit: {bsonType: 'string'},category: {bsonType: 'object',
+title:'object',required: [         'name'],properties: {name: {bsonType: 'string'}}}}}}},customer: {bsonType: 'objectId'},store: {bsonType: 'objectId'}}         }      }});  

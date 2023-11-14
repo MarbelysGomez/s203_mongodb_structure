@@ -1,0 +1,4 @@
+
+db.createCollection( 'user', {validator: {$jsonSchema: {bsonType: 'object',title:'user',required: [         'name',          'email',          'password',          'birthdate',          'gender',          'location'],properties: {name: {bsonType: 'string'},email: {bsonType: 'string'},password: {bsonType: 'string'},birthdate: {bsonType: 'date'},gender: {enum: , description:'{female, male, other}',},location: {bsonType: 'object',
+title:'object',required: [         'country',          'postal_code'],properties: {country: {bsonType: 'string'},postal_code: {bsonType: 'string'}}},playlist: {bsonType: 'array',items: {
+title:'object',required: [         'name',          'creation_date',          'status'],properties: {name: {bsonType: 'string'},creation_date: {bsonType: 'timestamp'},status: {enum: , description:'{public, private}',}}}}}         }      }});  
